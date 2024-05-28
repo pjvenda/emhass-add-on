@@ -34,7 +34,9 @@ options:
   data_path: default
   costfun: profit
   sensor_power_photovoltaics: sensor.power_photovoltaics
+  sensor_power_photovoltaics_in_kw: false
   sensor_power_load_no_var_loads: sensor.power_load_no_var_loads
+  sensor_power_load_no_var_loads_in_kw: false
   set_total_pv_sell: false
   set_nocharge_from_grid: false
   set_nodischarge_to_grid: false
@@ -89,7 +91,9 @@ schema:
   data_path: "list(default|/data/|/share/)?"
   costfun: "list(profit|cost|self-consumption)?"
   sensor_power_photovoltaics: "str?"
+  sensor_power_photovoltaics_in_kw: "bool?" #optional
   sensor_power_load_no_var_loads: "str?"
+  sensor_power_load_no_var_loads_in_kw: "bool?" #optional
   optimization_time_step: "int(5,1440)?" #optional
   historic_days_to_retrieve: "int(2,365)?" #optional
   method_ts_round: "list(nearest|first|last)?" #optional

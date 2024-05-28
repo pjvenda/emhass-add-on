@@ -89,9 +89,15 @@ configuration:
   sensor_power_photovoltaics:
     name: sensor_power_photovoltaics, The Home Assistant sensor for PV power production
     description: This is the name of the photovoltaic produced power sensor in Watts from Home Assistant. For example sensor.power_photovoltaics.
+  sensor_power_photovoltaics_in_kw:
+    name: sensor_power_photovoltaics_in_kw, Home Assistant sensor PV power production is in kW rather than W
+    description: Controls whether the photovoltaic produced power sensor from Home Assistant is read in W or kW. Set to True for sensor in kW.
   sensor_power_load_no_var_loads:
     name: sensor_power_load_no_var_loads, The Home Assistant sensor for the load power without the deferrable loads
     description: The name of the household power consumption sensor in Watts from Home Assistant. The deferrable loads that we will want to include in the optimization problem should be substracted from this sensor in HASS. For example sensor.power_load_no_var_loads.
+  sensor_power_load_no_var_loads_in_kw:
+    name: sensor_power_load_no_var_loads_in_kw, Home Assistant load sensor is in kW rather than W
+    description: Controls whether the load_no_var_loads sensor from Home Assistant is read in W or kW. Set to True for sensor in kW.
   load_negative:
     name: load_negative, If the retrived load variable is negative by convention
     description: (Default False). Options are True or False
